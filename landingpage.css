@@ -1,0 +1,274 @@
+:root {
+    --bg: #0d1224;
+    --card: #151b32;
+    --line: #243052;
+    --txt: #eaf0ff;
+    --muted: #9aa3b2;
+    --neon: #00e5ff;
+    --prim: #7c3aed;
+    --prim-2: #5b21b6;
+
+    /* novas cores */
+    --azul: #0000ff;
+    --verde: #00ff00;
+    --amarela: #ffff00;
+    --aquamarine: #7fffd4;
+
+    --r: 14px;
+    --sh: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+   
+}
+
+#corpo {
+    margin: 0;
+    color: var(--txt);
+    font-family: ui-sans-serif, system-ui, Arial, "IBM Plex Mono", monospace;
+    background: rgb(141, 141, 228);
+}
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background-color: rgba(10, 14, 30, .6);
+    border-bottom: 2px solid black;
+    backdrop-filter: blur(8px);
+}
+
+.logo-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-link {
+    color: var(--txt);
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--azul), var(--neon));
+    padding: 8px 14px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+}
+
+.menu-link:hover {
+    background: black;
+
+}
+
+/*To erase*/
+.menu-btn {
+    text-decoration: none;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--prim), var(--aquamarine));
+    color: black;
+    padding: 8px 14px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+}
+
+.secao {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.secao-header {
+    margin-bottom: 14px;
+}
+
+.titulo {
+    margin: 0 0 4px;
+}
+
+.descricao {
+    margin: 0;
+    color: var(--muted);
+}
+
+.comunidade-sbc {
+    padding-top: 20px;
+}
+
+.comunidade-caixa {
+    display: grid;
+    gap: 18px;
+    padding: 24px;
+    border-radius: var(--r);
+    background: linear-gradient(180deg, rgba(124, 58, 237, .35), transparent);
+    border: 1px solid rgba(124, 58, 237, .24);
+    box-shadow: var(--sh);
+}
+
+.titulo-comunidade {
+    margin: 0;
+    font-size: 32px;
+}
+
+.subtitulo-comunidade {
+    margin: 0;
+    color: var(--muted);
+    color: var(--azul);
+    font-weight: 500;
+}
+
+.comunidade-aside {
+    border-top: 1px double var(--line);
+    padding-top: 8px;
+}
+
+.follow-and-media {
+    text-decoration: none;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--prim), var(--aquamarine));
+    color: black;
+    padding: 10px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+}
+
+.media {
+    background: linear-gradient(90deg, var(--prim), var(--aquamarine));
+    color: black;
+    padding: 5px 5px;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+}
+
+.side-button {
+    background: linear-gradient(90deg, var(--prim), var(--aquamarine));
+    color: var(--azul);
+    font-weight: bold;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .4);
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.side-button:hover {
+    filter: brightness(.95);
+}
+
+#name,
+#date-of-birth,
+#english_level,
+#password {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--bg);
+    border-radius: 15px;
+    background: rgb(175, 172, 172);
+    color: #fff;
+    font-weight: bold;
+}
+
+#mat-elements {
+    font-weight: bold;
+}
+
+.lista {
+    list-style: "+";
+    padding-left: 20px;
+    color: var(--azul);
+    font-weight: 500;
+}
+
+.tabela-wrap {
+    overflow: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: gray;
+}
+
+.tabela-cap {
+    padding: 12px;
+    text-align: left;
+    color: black;
+}
+
+.tabela-head {
+    background: rgb(99, 97, 97);
+
+}
+
+.tabela-th,
+.tabela-td {
+    padding: 12px;
+    border-top: 1px solid var(--line);
+    text-align: left;
+}
+
+.tabela-linha:hover {
+    background: rgba(123, 58, 237, .07);
+}
+
+/* The modifications that I made*/
+.social-media-contact {
+    border: solid 2px var(--bg);
+    border-radius: 15px;
+    color: aquamarine;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: rgba(97, 133, 241, 0.75);
+}
+
+img {
+    border-radius: var(--r);
+}
+
+h2 {
+    color: var(--txt);
+    background: linear-gradient(90deg, var(--azul), var(--neon));
+    padding: 5px 5px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+    display: inline-block;
+}
+
+/* Botão interativo */
+.btn-toggle {
+    background-color: rgb(90, 199, 104);
+
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-toggle:hover {
+    background-color: #ffd700;
+
+}
