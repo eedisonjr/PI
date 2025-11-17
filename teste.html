@@ -530,8 +530,8 @@
 <body id="corpo">
     <header id="topo" class="topo">
         <div id="logo-area" class="logo-area">
-            <img id="logo" class="logo" src="IMG (2).png"
-                alt="logo schoolboycenter" style="width: 35px; height: 35px; border-radius: 50%;">
+            <img id="logo" class="logo" src="IMG (2).png" alt="logo schoolboycenter"
+                style="width: 35px; height: 35px; border-radius: 50%;">
             <strong id="marca">Schoolboy Center</strong>
         </div>
 
@@ -647,12 +647,12 @@
                     <label for="english_level">Nível de Inglês</label>
                     <select id="english_level" required>
                         <option value="">Selecione o seu nível</option>
-                        <option>A1 (Beginner)</option>
-                        <option>A2 (Elementary)</option>
-                        <option>B1 (Intermediate)</option>
-                        <option>B2 (Upper Intermediate)</option>
-                        <option>C1 (Advanced)</option>
-                        <option>C2 (Proficiency/Mastery)</option>
+                        <option>A1 (Beginner) = (Iniciante)</option>
+                        <option>A2 (Elementary) = (Básico)</option>
+                        <option>B1 (Intermediate) = (Intermediário)</option>
+                        <option>B2 (Upper Intermediate) = (Intermediário Avançado)</option>
+                        <option>C1 (Advanced) = (Avançado)</option>
+                        <option>C2 (Proficiency/Mastery) = (Fluência/Mestria)</option>
                     </select>
                 </div>
 
@@ -674,6 +674,7 @@
                         <label><input type="radio" name="genero" value="outro">Outro / Other</label>
                     </div>
                 </div>
+
                 <div class="divs-group">
                     <label id="mat-elements" for="password">Senha</label>
                     <input type="password" id="password" name="password" placeholder="Crie uma senha">
@@ -688,6 +689,38 @@
 
                 <button type="submit" class="side-button">Cadastrar</button>
                 <p class="login-link">Já tem conta? <a href="#">Entrar</a></p>
+
+                <style>
+                    .forgot-password {
+                        text-align: center;
+                        margin-top: 0.5rem;
+                    }
+
+                    .forgot-password a {
+                        color: #A66A3C;
+                        /* cor primária */
+                        font-weight: 600;
+                        text-decoration: none;
+                        transition: 0.3s;
+                        font-family: "Poppins", Arial, sans-serif;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+
+                    .forgot-password a:hover {
+                        color: #D4A017;
+                        /* cor secundária */
+                        text-decoration: underline;
+                    }
+                </style>
+
+                <p class="forgot-password">
+                    <a href="#">
+                        🔐 Esqueci a senha
+                    </a>
+                </p>
+
             </div>
         </section>
 
@@ -710,32 +743,32 @@
                     <tbody id="tabela-body" class="tabela-body">
                         <tr id="linha-a1" class="tabela-linha">
                             <td class="tabela-td">A1</td>
-                            <td class="tabela-td">Beginner</td>
+                            <td class="tabela-td">Beginner = (Iniciante)</td>
                             <td class="tabela-td">R$ 180/mês</td>
                         </tr>
                         <tr id="linha-a2" class="tabela-linha">
                             <td class="tabela-td">A2</td>
-                            <td class="tabela-td">Elementary</td>
+                            <td class="tabela-td">Elementary = (Básico)</td>
                             <td class="tabela-td">R$ 200/mês</td>
                         </tr>
                         <tr id="linha-b1" class="tabela-linha">
                             <td class="tabela-td">B1</td>
-                            <td class="tabela-td">Intermediate</td>
+                            <td class="tabela-td">Intermediate = (Intermediário)</td>
                             <td class="tabela-td">R$ 210/mês</td>
                         </tr>
                         <tr id="linha-b2" class="tabela-linha">
                             <td class="tabela-td">B2</td>
-                            <td class="tabela-td">Upper Intermediate</td>
+                            <td class="tabela-td">Upper Intermediate = (Intermediário Avançado)</td>
                             <td class="tabela-td">R$ 220/mês</td>
                         </tr>
                         <tr id="linha-c1" class="tabela-linha">
                             <td class="tabela-td">C1</td>
-                            <td class="tabela-td">Advanced</td>
+                            <td class="tabela-td">Advanced = (Avançado)</td>
                             <td class="tabela-td">R$ 240/mês</td>
                         </tr>
                         <tr id="linha-c2" class="tabela-linha">
                             <td class="tabela-td">C2</td>
-                            <td class="tabela-td">Proficiency/Mastery</td>
+                            <td class="tabela-td">Proficiency/Mastery = (Fluência/Mestria)</td>
                             <td class="tabela-td">R$ 250/mês</td>
                         </tr>
                     </tbody>
