@@ -1,8 +1,4 @@
-/* ============================ */
-/* SCHOOLBOY CENTER - SAVANNA SPIRIT THEME */
-/* ============================ */
 
-/* ====== VARIÁVEIS ====== */
 :root {
     --cor-primaria: #A66A3C;
     --cor-secundaria: #D4A017;
@@ -15,7 +11,6 @@
     --transparente: rgba(0, 0, 0, 0);
 }
 
-/* ====== RESET ====== */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +25,6 @@ body {
     line-height: 1.6;
 }
 
-/* ====== CABEÇALHO ====== */
 header.topo {
     background-color: var(--cor-fundo-escuro);
     color: var(--branco);
@@ -71,7 +65,6 @@ header.topo {
     color: var(--cor-secundaria);
 }
 
-/* ====== HERO / INÍCIO ====== */
 .comunidade-sbc {
     background-color: var(--cor-fundo);
     padding: 5rem 2rem;
@@ -105,7 +98,6 @@ header.topo {
     font-weight: 500;
 }
 
-/* ====== SEÇÕES ====== */
 .secao {
     padding: 4rem 2rem;
     background-color: var(--branco);
@@ -126,7 +118,6 @@ header.topo {
     margin-bottom: 1rem;
 }
 
-/* ====== LINKS DE MÍDIA ====== */
 .follow-and-media {
     display: inline-flex;
     align-items: center;
@@ -151,7 +142,6 @@ header.topo {
     transform: rotate(10deg);
 }
 
-/* ====== TABELA ====== */
 .tabela {
     width: 100%;
     border-collapse: collapse;
@@ -175,7 +165,6 @@ header.topo {
     background-color: #f8f5ef;
 }
 
-/* ====== FORMULÁRIO ====== */
 select, input, button {
     width: 100%;
     padding: 0.7rem;
@@ -205,7 +194,6 @@ select, input, button {
     background-color: var(--cor-secundaria);
 }
 
-/* ====== CONTATO ====== */
 .social-media-contact {
     display: flex;
     flex-direction: column;
@@ -213,7 +201,6 @@ select, input, button {
     gap: 0.5rem;
 }
 
-/* ====== BOTÃO LIGHT MODE ====== */
 .btn-toggle {
     background-color: var(--cor-secundaria);
     color: var(--branco);
@@ -233,7 +220,6 @@ select, input, button {
     background-color: var(--cor-primaria);
 }
 
-/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
