@@ -1,0 +1,759 @@
+/* ========================================
+   SCHOOLBOY CENTER - SAVANNA SPIRIT THEME
+   ======================================== */
+
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --cor-primaria: #A66A3C;
+    --cor-secundaria: #D4A017;
+    --cor-fundo: #FAF3E0;
+    --cor-fundo-escuro: #3E2E1C;
+    --cor-texto: #3E2E1C;
+    --cor-texto-secundario: #5C5248;
+    --cor-realce: #9DBE7B;
+    --branco: #FFFFFF;
+}
+
+/* Light mode alternativo */
+body.light-mode {
+    --cor-fundo: #F5F5F5;
+    --cor-fundo-escuro: #222222;
+    --cor-texto: #222222;
+    --cor-texto-secundario: #555555;
+}
+
+/* ===== RESET BÁSICO ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== HEADER / TOPO ===== */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topo-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-simbolo {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, #f7e2b5, #A66A3C);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.logo-textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-nome {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.logo-subtitulo {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 0.92rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.15rem;
+}
+
+.menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    transition: width 0.2s ease;
+}
+
+.menu-link:hover::after,
+.menu-link.ativo::after {
+    width: 100%;
+}
+
+.menu-link:hover {
+    color: var(--cor-texto);
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 4rem 0 3rem;
+}
+
+.hero-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.hero-textos h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.hero-textos p {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.8rem;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-card {
+    background-color: var(--branco);
+    border-radius: 1.2rem;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.hero-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--cor-texto-secundario);
+}
+
+.hero-card ul {
+    list-style: none;
+}
+
+.hero-card li {
+    font-size: 0.92rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hero-card li::before {
+    content: "•";
+    color: var(--cor-realce);
+    font-size: 1.2rem;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-destaque {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.btn-destaque:hover {
+    background-color: #8c5831;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 1px solid rgba(166, 106, 60, 0.5);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(166, 106, 60, 0.05);
+}
+
+/* ===== SEÇÕES GENÉRICAS ===== */
+.secao {
+    padding: 3.5rem 0;
+}
+
+.secao header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.secao header h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.secao header p {
+    max-width: 580px;
+    margin: 0 auto;
+    color: var(--cor-texto-secundario);
+    font-size: 0.98rem;
+}
+
+/* ===== SOBRE ===== */
+.grid-sobre {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.sobre-item {
+    background-color: var(--branco);
+    border-radius: 1rem;
+    padding: 1.3rem 1.2rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sobre-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.sobre-item p {
+    font-size: 0.93rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ===== REDES SOCIAIS ===== */
+.secao-redes {
+    background-color: #f3e7cf;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.social-card {
+    background-color: #f9f0de;
+    border-radius: 1.4rem;
+    padding: 1.6rem 1.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-family: "Playfair Display", serif;
+}
+
+.social-card p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.4rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+}
+
+/* Cores dos ícones */
+.social-icon-tiktok {
+    color: #000000;
+}
+
+.social-icon-instagram {
+    background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.social-icon-facebook {
+    color: #1877F2;
+}
+
+.social-link {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+}
+
+.social-link i {
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    background-color: #8c5831;
+}
+
+/* ===== MENSALIDADES ===== */
+.secao-mensalidades {
+    background-color: #fdf7eb;
+}
+
+.tabela-mensalidades {
+    background-color: var(--branco);
+    border-radius: 1.2rem;
+    padding: 1.5rem 1.3rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.linha-mensalidade {
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr 0.8fr;
+    padding: 0.7rem 0.5rem;
+    align-items: center;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+.linha-mensalidade:last-child {
+    border-bottom: none;
+}
+
+.linha-mensalidade .nivel {
+    font-weight: 700;
+}
+
+.linha-mensalidade .descricao {
+    color: var(--cor-texto-secundario);
+}
+
+.linha-mensalidade .preco {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ===== FORMULÁRIO DE MATRÍCULA ===== */
+.secao-matricula {
+    background-color: #f4ead7;
+}
+
+.form-matricula {
+    background-color: var(--branco);
+    border-radius: 1.3rem;
+    padding: 1.8rem 1.5rem;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 1.4rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border-radius: 0.8rem;
+    border: 1px solid #d3c7b3;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #fefaf3;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(166, 106, 60, 0.2);
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.checkbox-label input {
+    margin-top: 0.2rem;
+}
+
+.btn-enviar {
+    margin-top: 1.5rem;
+}
+
+/* ===== CONTATO ===== */
+.secao-contato {
+    background-color: #fdf7eb;
+}
+
+.grid-contato {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem;
+}
+
+.contato-info,
+.contato-extra {
+    background-color: var(--branco);
+    border-radius: 1.2rem;
+    padding: 1.4rem 1.4rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.contato-info h3,
+.contato-extra h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.contato-info ul {
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+    font-size: 0.95rem;
+}
+
+.contato-info li i {
+    margin-right: 0.4rem;
+    color: var(--cor-primaria);
+}
+
+.contato-extra p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    background-color: var(--cor-fundo-escuro);
+    color: #f3e7cf;
+}
+
+/* ===== BOTÃO TOGGLE LIGHT MODE ===== */
+.btn-toggle {
+    position: fixed;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 9998;
+    border-radius: 999px;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== CHATBOT ===== */
+.chatbot-container {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 5rem;
+    z-index: 9999;
+}
+
+.chatbot-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-2px);
+    background-color: #8c5831;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-window {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    width: 320px;
+    max-height: 430px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.chatbot-header {
+    background-color: var(--cor-fundo-escuro);
+    color: #fff;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    padding: 0.8rem;
+    height: 260px;
+    overflow-y: auto;
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.chatbot-message {
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    max-width: 90%;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.chatbot-message.bot {
+    background-color: #fff;
+    align-self: flex-start;
+    border: 1px solid #e0d9c9;
+}
+
+.chatbot-message.user {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    align-self: flex-end;
+}
+
+.chatbot-input-area {
+    display: flex;
+    padding: 0.6rem;
+    border-top: 1px solid #e0d9c9;
+    background-color: #faf7ef;
+    gap: 0.4rem;
+}
+
+#chatbot-input {
+    flex: 1;
+    border-radius: 999px;
+    border: 1px solid #d3c7b3;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+#chatbot-input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(166, 106, 60, 0.2);
+}
+
+.chatbot-send {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-send i {
+    font-size: 0.9rem;
+}
+
+.chatbot-send:hover {
+    background-color: #8c5831;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+    .hero-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-card {
+        order: -1;
+    }
+
+    .grid-sobre {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .grid-contato {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .menu {
+        display: none; /* simples para mobile; pode virar burger depois se quiser */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-toggle {
+        left: 1rem;
+        bottom: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .chatbot-window {
+        width: 95vw;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .chatbot-container {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 4.2rem;
+    }
+
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .secao header h2 {
+        font-size: 1.7rem;
+    }
+}
