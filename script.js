@@ -137,7 +137,7 @@ function handleUserMessage(message) {
     ) {
         addChatMessage(
             `Para fazer a matrícula, basta preencher o formulário na seção <b>Matrícula</b> do site com seus dados (nome, data de nascimento, nível de inglês etc.).<br><br>
-            Se preferir, você também pode falar diretamente pelo WhatsApp: <b>(71) 99186-4210</b>.`
+            Se preferir, você também pode falar diretamente pelo WhatsApp: <b>(71) 99286-4210</b>.`
         );
         return;
     }
@@ -152,7 +152,7 @@ function handleUserMessage(message) {
     ) {
         addChatMessage(
             `Você pode falar com o Schoolboy Center pelos seguintes canais:<br>
-            • WhatsApp/Telefone: <b>(71) 99186-4210</b><br>
+            • WhatsApp/Telefone: <b>(71) 99286-4210</b><br>
             • E-mail: <b>schoolboycenter2016@gmail.com</b><br><br>
             Fique à vontade para enviar suas dúvidas!`
         );
