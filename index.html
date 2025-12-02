@@ -4,26 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#3E2E1C" />
+    <meta name="theme-color" content="#26211D" />
     <title>Schoolboy Center SBC - Knowledge and Wisdom</title>
 
-    <!-- Fontes do Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
 
-    <!-- Ícones (Font Awesome) -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- TOPO / HEADER -->
     <header class="topo">
         <div class="topo-conteudo container">
             <div class="logo">
@@ -35,71 +30,93 @@
             </div>
 
             <nav class="menu">
-                <a href="#inicio" class="menu-link">Início</a>
-                <a href="#sobre" class="menu-link">Sobre</a>
-                <a href="#redes" class="menu-link">Redes Sociais</a>
-                <a href="#mensalidades" class="menu-link">Mensalidades</a>
-                <a href="#matricula" class="menu-link">Matrícula</a>
-                <a href="#contato" class="menu-link">Contato</a>
+                <a href="#inicio" class="menu-link" data-i18n="nav-home">Início</a>
+                <a href="#sobre" class="menu-link" data-i18n="nav-about">Sobre</a>
+                <a href="#redes" class="menu-link" data-i18n="nav-social">Redes Sociais</a>
+                <a href="#mensalidades" class="menu-link" data-i18n="nav-pricing">Mensalidades</a>
+                <a href="#matricula" class="menu-link" data-i18n="nav-enroll">Matrícula</a>
+                <a href="#contato" class="menu-link" data-i18n="nav-contact">Contato</a>
             </nav>
+
+            <div class="lang-switcher">
+                <button class="lang-btn ativo" data-lang="pt">
+                    <img src="https://flagcdn.com/w20/br.png" alt="Português">
+                </button>
+
+                <button class="lang-btn" data-lang="en">
+                    <img src="https://flagcdn.com/w20/us.png" alt="English (USA)">
+                </button>
+
+                <button class="lang-btn" data-lang="es">
+                    <img src="https://flagcdn.com/w20/es.png" alt="Español (España)">
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- HERO / INÍCIO -->
     <main>
         <section id="inicio" class="hero">
             <div class="container hero-conteudo">
                 <div class="hero-textos">
-                    <h1>Aprenda Inglês com Schoolboy Center — Knowledge and Wisdom.</h1>
-                    <p>
-                        O Schoolboy Center SBC oferece aulas de inglês com foco em comunicação real,
-                        acolhimento e evolução constante — do nível A1 ao C2.
+                    <h1 data-i18n="hero-title">
+                        Inglês com espírito de savana, alma de comunidade.
+                    </h1>
+                    <p data-i18n="hero-subtitle">
+                        O Schoolboy Center SBC oferece aulas de inglês com foco em comunicação real, acolhimento e
+                        evolução
+                        constante — do nível A1 ao C2.
                     </p>
                     <div class="hero-botoes">
-                        <a href="#matricula" class="btn btn-destaque">Quero me matricular</a>
-                        <a href="#mensalidades" class="btn btn-secundario">Ver mensalidades</a>
+                        <a href="#matricula" class="btn btn-destaque" data-i18n="btn-enroll">
+                            Quero me matricular
+                        </a>
+                        <a href="#mensalidades" class="btn btn-destaque" data-i18n="btn-pricing">
+                            Ver mensalidades
+                        </a>
                     </div>
                 </div>
 
                 <div class="hero-card">
-                    <h2>Comece hoje mesmo</h2>
-                    <p>Faça o teste de nível, escolha o plano ideal e venha fazer parte da nossa comunidade de alunos.</p>
+                    <h2 data-i18n="hero-card-title">Comece hoje mesmo</h2>
+                    <p data-i18n="hero-card-text">
+                        Faça o teste de nível, escolha o plano ideal e venha fazer parte da nossa comunidade de alunos.
+                    </p>
                     <ul>
-                        <li>Aulas em pequenos grupos</li>
-                        <li>Foco em conversação</li>
-                        <li>Acompanhamento personalizado</li>
+                        <li data-i18n="hero-card-item1">Aulas em pequenos grupos</li>
+                        <li data-i18n="hero-card-item2">Foco em conversação</li>
+                        <li data-i18n="hero-card-item3">Acompanhamento personalizado</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- SOBRE -->
         <section id="sobre" class="secao">
             <div class="container">
                 <header>
-                    <h2>Sobre o Schoolboy Center</h2>
-                    <p>
-                        Somos uma escola de inglês que acredita que aprender um idioma vai muito além da gramática:
-                        é sobre cultura, liberdade e oportunidades.
+                    <h2 data-i18n="about-title">Sobre o Schoolboy Center</h2>
+                    <p data-i18n="about-subtitle">
+                        Somos uma escola de inglês que acredita que aprender um idioma vai muito além da gramática: é
+                        sobre
+                        cultura, liberdade e oportunidades.
                     </p>
                 </header>
 
                 <div class="grid-sobre">
                     <div class="sobre-item">
-                        <h3>Metodologia viva</h3>
-                        <p>
+                        <h3 data-i18n="about-box1-title">Metodologia viva</h3>
+                        <p data-i18n="about-box1-text">
                             Aulas dinâmicas, com foco em situações reais, usando músicas, vídeos, jogos e conversas.
                         </p>
                     </div>
                     <div class="sobre-item">
-                        <h3>Do básico ao avançado</h3>
-                        <p>
+                        <h3 data-i18n="about-box2-title">Do básico ao avançado</h3>
+                        <p data-i18n="about-box2-text">
                             Trabalhamos com os níveis A1, A2, B1, B2, C1 e C2, seguindo o padrão internacional CEFR.
                         </p>
                     </div>
                     <div class="sobre-item">
-                        <h3>Comunidade acolhedora</h3>
-                        <p>
+                        <h3 data-i18n="about-box3-title">Comunidade acolhedora</h3>
+                        <p data-i18n="about-box3-text">
                             Um ambiente seguro para errar, praticar e crescer — sem julgamentos.
                         </p>
                     </div>
@@ -107,219 +124,240 @@
             </div>
         </section>
 
-        <!-- REDES SOCIAIS -->
         <section id="redes" class="secao secao-redes">
             <div class="container">
                 <header>
-                    <h2>Aprenda também pelas redes sociais</h2>
-                    <p>
+                    <h2 data-i18n="social-title">Aprenda também pelas redes sociais</h2>
+                    <p data-i18n="social-subtitle">
                         Conteúdos gratuitos para você praticar inglês todos os dias nas suas plataformas favoritas.
                     </p>
                 </header>
 
                 <div class="social-grid">
-                    <!-- TikTok -->
                     <article class="social-card">
                         <h3>
                             <i class="fa-brands fa-tiktok social-icon social-icon-tiktok"></i>
-                            TikTok
+                            <span data-i18n="social-tiktok-title">TikTok</span>
                         </h3>
-                        <p>
+                        <p data-i18n="social-tiktok-text">
                             No TikTok, você encontra vídeos curtos, posts e fotos preparados com criatividade
                             para lhe ajudar a melhorar o seu inglês.
                         </p>
-                        <a class="social-link" href="https://www.tiktok.com/@schoolboy.center?_r=1&_t=ZS-91lDrMu0KDU" target="_blank" rel="noopener noreferrer">
+                        <a class="social-link" href="#" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-tiktok"></i>
-                            <span>Siga SBC no TikTok</span>
+                            <span data-i18n="social-tiktok-btn">Siga SBC no TikTok</span>
                         </a>
                     </article>
 
-                    <!-- Instagram -->
                     <article class="social-card">
                         <h3>
                             <i class="fa-brands fa-instagram social-icon social-icon-instagram"></i>
-                            Instagram
+                            <span data-i18n="social-instagram-title">Instagram</span>
                         </h3>
-                        <p>
+                        <p data-i18n="social-instagram-text">
                             No Instagram, você encontra vídeos curtos, posts e fotos preparados com criatividade
                             para lhe ajudar a melhorar o seu inglês.
                         </p>
-                        <a class="social-link" href="https://www.instagram.com/schoolboycenter?igsh=ZDc4aHhsbTVtcHZz&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                        <a class="social-link" href="#" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-instagram"></i>
-                            <span>Siga SBC no Instagram</span>
+                            <span data-i18n="social-instagram-btn">Siga SBC no Instagram</span>
                         </a>
                     </article>
 
-                    <!-- Facebook -->
                     <article class="social-card">
                         <h3>
                             <i class="fa-brands fa-facebook social-icon social-icon-facebook"></i>
-                            Facebook
+                            <span data-i18n="social-facebook-title">Facebook</span>
                         </h3>
-                        <p>
+                        <p data-i18n="social-facebook-text">
                             No Facebook, você encontra conteúdos curtos de vídeos, posts e fotos preparados
                             com criatividade para lhe ajudar a melhorar o seu inglês.
                         </p>
-                        <a class="social-link" href="https://www.facebook.com/schoolboycenter" target="_blank" rel="noopener noreferrer">
+                        <a class="social-link" href="#" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-facebook-f"></i>
-                            <span>Siga SBC no Facebook</span>
+                            <span data-i18n="social-facebook-btn">Siga SBC no Facebook</span>
                         </a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- MENSALIDADES -->
         <section id="mensalidades" class="secao secao-mensalidades">
             <div class="container">
                 <header>
-                    <h2>Mensalidades</h2>
-                    <p>Planos pensados para caber no seu bolso e acompanhar seu ritmo de aprendizagem.</p>
+                    <h2 data-i18n="pricing-title">Mensalidades</h2>
+                    <p data-i18n="pricing-subtitle">
+                        Planos pensados para caber no seu bolso e acompanhar seu ritmo de aprendizagem.
+                    </p>
                 </header>
 
                 <div class="tabela-mensalidades">
+                    <div class="mensalidades-top" data-i18n="pricing-banner">
+                        <span><em>Hurray, o preço é acessível!</em></span>
+                    </div>
+
+                    <div class="mensalidades-header">
+                        <span class="col-nivel" data-i18n="pricing-col-level">Nível</span>
+                        <span class="col-descricao" data-i18n="pricing-col-desc">Descrição</span>
+                        <span class="col-valor" data-i18n="pricing-col-value">Valor</span>
+                    </div>
+
                     <div class="linha-mensalidade">
                         <span class="nivel">A1</span>
-                        <span class="descricao">Beginner -  Iniciante</span>
+                        <span class="descricao" data-i18n="pricing-a1-desc">Beginner = (Iniciante)</span>
                         <span class="preco">R$ 180/mês</span>
                     </div>
                     <div class="linha-mensalidade">
                         <span class="nivel">A2</span>
-                        <span class="descricao">Elementary - Básico</span>
+                        <span class="descricao" data-i18n="pricing-a2-desc">Elementary = (Básico)</span>
                         <span class="preco">R$ 200/mês</span>
                     </div>
                     <div class="linha-mensalidade">
                         <span class="nivel">B1</span>
-                        <span class="descricao">Intermediate - Intermediário</span>
+                        <span class="descricao" data-i18n="pricing-b1-desc">Intermediate = (Intermediário)</span>
                         <span class="preco">R$ 210/mês</span>
                     </div>
                     <div class="linha-mensalidade">
                         <span class="nivel">B2</span>
-                        <span class="descricao">Upper Intermediate - Intermediário Avançado</span>
+                        <span class="descricao" data-i18n="pricing-b2-desc">Upper Intermediate = (Intermediário
+                            Avançado)</span>
                         <span class="preco">R$ 220/mês</span>
                     </div>
                     <div class="linha-mensalidade">
                         <span class="nivel">C1</span>
-                        <span class="descricao">Advanced - Avançado</span>
+                        <span class="descricao" data-i18n="pricing-c1-desc">Advanced = (Avançado)</span>
                         <span class="preco">R$ 240/mês</span>
                     </div>
                     <div class="linha-mensalidade">
                         <span class="nivel">C2</span>
-                        <span class="descricao">Proficiency / Mastery - Fluência / Mestria</span>
+                        <span class="descricao" data-i18n="pricing-c2-desc">Proficiency/Mastery =
+                            (Fluência/Mestria)</span>
                         <span class="preco">R$ 250/mês</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MATRÍCULA -->
         <section id="matricula" class="secao secao-matricula">
             <div class="container">
                 <header>
-                    <h2>Formulário de Matrícula</h2>
-                    <p>Preencha seus dados para que possamos entrar em contato e concluir sua matrícula.</p>
+                    <h2 data-i18n="enroll-title">Formulário de Matrícula</h2>
+                    <p data-i18n="enroll-subtitle">
+                        Preencha seus dados para que possamos entrar em contato e concluir sua matrícula.
+                    </p>
                 </header>
 
                 <form class="form-matricula">
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="nivel">Nível de Inglês</label>
+                            <label for="nivel" data-i18n="enroll-level-label">Nível de Inglês</label>
                             <select id="nivel" required>
-                                <option value="">Selecione o nível</option>
-                                <option value="A1">A1 - Beginner -  Iniciante</option>
-                                <option value="A2">A2 - Elementary - Básico</option>
-                                <option value="B1">B1 - Intermediate - Intermediário</option>
-                                <option value="B2">B2 - Upper Intermediate - Intermediário Avançado</option>
-                                <option value="C1">C1 - Advanced - Avançado</option>
-                                <option value="C2">C2 - Proficiency / Mastery - Fluência / Mestria</option>
+                                <option value="" data-i18n="enroll-level-placeholder">Selecione o nível</option>
+                                <option value="A1">A1 - Beginner</option>
+                                <option value="A2">A2 - Elementary</option>
+                                <option value="B1">B1 - Intermediate</option>
+                                <option value="B2">B2 - Upper Intermediate</option>
+                                <option value="C1">C1 - Advanced</option>
+                                <option value="C2">C2 - Proficiency / Mastery</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" placeholder="Digite o seu nome completo" required>
+                            <label for="name" data-i18n="enroll-name-label">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Digite o seu nome completo" />
                         </div>
 
                         <div class="form-group">
-                            <label for="date-of-birth">Data de Nascimento</label>
-                            <input type="date" id="date-of-birth" required>
+                            <label for="date-of-birth" data-i18n="enroll-birth-label">Data de Nascimento</label>
+                            <input type="date" id="date-of-birth" />
                         </div>
 
                         <div class="form-group">
-                            <label>Gênero / Gender</label>
+                            <label data-i18n="enroll-gender-label">Gênero / Gender</label>
                             <div class="radio-group">
-                                <label><input type="radio" name="gender" value="Masculino"> Masculino</label>
-                                <label><input type="radio" name="gender" value="Feminino"> Feminino</label>
-                                <label><input type="radio" name="gender" value="Outro"> Outro / Prefiro não dizer</label>
+                                <label><input type="radio" name="gender" value="Masculino" /> <span
+                                        data-i18n="enroll-gender-male">Masculino</span></label>
+                                <label><input type="radio" name="gender" value="Feminino" /> <span
+                                        data-i18n="enroll-gender-female">Feminino</span></label>
+                                <label><input type="radio" name="gender" value="Outro" /> <span
+                                        data-i18n="enroll-gender-other">Outro / Prefiro não dizer</span></label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Telefone / WhatsApp</label>
-                            <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                            <label for="phone" data-i18n="enroll-phone-label">Telefone / WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="(00) 00000-0000" />
                         </div>
 
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                            <label for="email" data-i18n="enroll-email-label">E-mail</label>
+                            <input type="email" id="email" placeholder="seuemail@exemplo.com" />
                         </div>
 
                         <div class="form-group">
-                            <label for="preferred-contact">Forma de Contato Preferida</label>
+                            <label for="preferred-contact" data-i18n="enroll-contact-label">Forma de Contato
+                                Preferida</label>
                             <select id="preferred-contact">
-                                <option value="">Selecione</option>
-                                <option value="whatsapp">WhatsApp</option>
-                                <option value="ligacao">Ligação</option>
-                                <option value="email">E-mail</option>
+                                <option value="" data-i18n="enroll-contact-placeholder">Selecione</option>
+                                <option value="whatsapp" data-i18n="enroll-contact-whatsapp">WhatsApp</option>
+                                <option value="ligacao" data-i18n="enroll-contact-call">Ligação</option>
+                                <option value="email" data-i18n="enroll-contact-email">E-mail</option>
                             </select>
                         </div>
 
                         <div class="form-group form-group-full">
-                            <label for="message">Conte um pouco sobre você e seu objetivo com o inglês</label>
+                            <label for="message" data-i18n="enroll-message-label">
+                                Conte um pouco sobre você e seu objetivo com o inglês
+                            </label>
                             <textarea id="message" rows="4"
                                 placeholder="Ex.: viagens, trabalho, intercâmbio, faculdade, desenvolvimento pessoal..."></textarea>
                         </div>
 
                         <div class="form-group form-group-full">
                             <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                Confirmo que li e aceito os termos de uso e política de privacidade do Schoolboy Center.
+                                <input type="checkbox" />
+                                <span data-i18n="enroll-terms">
+                                    Confirmo que li e aceito os termos de uso e política de privacidade do Schoolboy
+                                    Center.
+                                </span>
                             </label>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-destaque btn-enviar">
+                    <button type="submit" class="btn btn-destaque btn-enviar" data-i18n="enroll-submit">
                         Enviar inscrição
                     </button>
                 </form>
             </div>
         </section>
 
-        <!-- CONTATO -->
         <section id="contato" class="secao secao-contato">
             <div class="container">
                 <header>
-                    <h2>Contato</h2>
-                    <p>Fale com o Schoolboy Center pelos canais abaixo.</p>
+                    <h2 data-i18n="contact-title">Contato</h2>
+                    <p data-i18n="contact-subtitle">Fale com o Schoolboy Center pelos canais abaixo.</p>
                 </header>
 
                 <div class="grid-contato">
                     <div class="contato-info">
-                        <h3>Informações de contato</h3>
+                        <h3 data-i18n="contact-info-title">Informações de contato</h3>
                         <ul>
-                            <li><i class="fa-solid fa-phone"></i> (71) 99286-4210</li>
-                            <li><i class="fa-solid fa-envelope"></i> schoolboycenter2016@gmail.com</li>
-                            <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: (71) 99286-4210</li>
+                            <li><i class="fa-solid fa-phone"></i> <span data-i18n="contact-phone">(71) 99286-4210</span>
+                            </li>
+                            <li><i class="fa-solid fa-envelope"></i> <span
+                                    data-i18n="contact-email">schoolboycenter2016@gmail.com</span></li>
+                            <li><i class="fa-brands fa-whatsapp"></i> <span data-i18n="contact-whatsapp">WhatsApp: (71)
+                                    99286-4210</span></li>
                         </ul>
                     </div>
 
                     <div class="contato-extra">
-                        <h3>Horários de atendimento</h3>
-                        <p>
-                            Segunda a sexta: 8h às 21h<br>
+                        <h3 data-i18n="contact-hours-title">Horários de atendimento</h3>
+                        <p data-i18n="contact-hours-text">
+                            Segunda a sexta: 8h às 21h<br />
                             Sábado: 8h às 12h
                         </p>
-                        <p>
+                        <p data-i18n="contact-extra-text">
                             Responderemos sua mensagem o mais breve possível.
                         </p>
                     </div>
@@ -328,17 +366,14 @@
         </section>
     </main>
 
-    <!-- RODAPÉ -->
     <footer class="footer">
         <p>&copy; 2025 Schoolboy Center SBC. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- BOTÃO TOGGLE LIGHT MODE -->
     <button class="btn-toggle" id="toggle-mode">
         Toggle Light Mode
     </button>
 
-    <!-- CHATBOT DE SUPORTE -->
     <div class="chatbot-container">
         <button id="chatbot-toggle" class="chatbot-toggle">
             💬
@@ -352,9 +387,8 @@
 
             <div id="chatbot-messages" class="chatbot-messages">
                 <div class="chatbot-message bot">
-                    Olá! Me chamo <b>LingoBot</b> 🤖, e estou aqui para te ajudar!
-                    <br><br>
-                    Por onde podemos começar?<br>
+                    Olá! Me chamo <b>LingoBot</b> 🤖, e estou aqui para te ajudar!<br /><br />
+                    Por onde podemos começar?<br />
                     Por favor, faça a sua pergunta. 😊
                 </div>
             </div>
@@ -368,7 +402,6 @@
         </div>
     </div>
 
-    <!-- JavaScript Externo -->
     <script src="script.js"></script>
 </body>
 
