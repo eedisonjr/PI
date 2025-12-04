@@ -1,0 +1,429 @@
+/* home.css
+   estilos específicos da página home
+   manter comentários em português e em letra minúscula
+*/
+
+/* variáveis específicas da home (usa cores já definidas globalmente) */
+:root {
+    --home-accent-1: #b66734;
+    --home-accent-2: #c89127;
+    --home-accent-vibrant: #76a76a;
+    --home-band-bg: linear-gradient(180deg, rgba(118, 167, 106, 0.03), rgba(0, 0, 0, 0) 40%);
+}
+
+/* hero - layout e estética */
+.home-hero {
+    padding: 5.2rem 0 3.5rem;
+    background: radial-gradient(1200px 400px at 10% 10%, rgba(182, 118, 52, 0.06), transparent 12%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 25%);
+    position: relative;
+    overflow: visible;
+}
+
+/* curva decorativa na base do hero */
+.home-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    height: 140px;
+    background: linear-gradient(180deg, rgba(227, 197, 157, 0.06), rgba(242, 231, 211, 0.02));
+    border-top-left-radius: 40% 50px;
+    border-top-right-radius: 40% 50px;
+    z-index: 0;
+}
+
+/* grid interno do hero */
+.home-hero-wrap {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+/* título principal - tipografia serifada */
+.home-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+    line-height: 1.02;
+    color: var(--cor-texto);
+    margin-bottom: .6rem;
+    text-transform: none;
+}
+
+/* parágrafo introdutório */
+.home-intro {
+    font-size: 1.02rem;
+    color: var(--cor-texto-secundario);
+    max-width: 680px;
+    margin-top: 0.4rem;
+}
+
+/* ações (botões) do hero */
+.home-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+/* botão de destaque (mesmo visual premium) */
+.btn-destaque {
+    background-color: var(--home-accent-1);
+    color: #fff;
+    padding: 0.95rem 1.9rem;
+    border-radius: 999px;
+    box-shadow: 0 18px 40px rgba(99, 52, 19, 0.26);
+    transition: transform .12s ease, box-shadow .12s ease;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-destaque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 28px 60px rgba(99, 52, 19, 0.32);
+}
+
+/* botão secundário com glow sutil */
+.btn-glow {
+    background: transparent;
+    border: 2px solid rgba(182, 118, 52, 0.25);
+    color: var(--home-accent-1);
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all .18s ease;
+    text-decoration: none;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 8px 28px rgba(118, 167, 106, 0.12), 0 2px 8px rgba(182, 118, 52, 0.08) inset;
+    transform: translateY(-2px);
+    border-color: var(--home-accent-1);
+}
+
+/* link textual simples (no hero) */
+.home-link-plain {
+    background: transparent;
+    border: 0;
+    color: var(--cor-texto-secundario);
+    text-decoration: underline;
+    padding: 0;
+    font-weight: 600;
+}
+
+/* card lateral do hero (profundidade e gradiente) */
+.home-side-card {
+    background: linear-gradient(180deg, #fffdf9, #fff9f0);
+    padding: 1.6rem;
+    border-radius: 14px;
+    box-shadow: 0 26px 64px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.home-side-card h3 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: .6rem;
+    color: var(--cor-texto);
+    text-transform: none;
+}
+
+.home-side-card p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+}
+
+/* estatísticas pequenas sob o hero */
+.home-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.home-stat {
+    background: #fff9f0;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    min-width: 140px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.home-num {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+}
+
+.home-lab {
+    color: var(--cor-texto-secundario);
+    font-size: .92rem;
+    margin-top: 6px;
+}
+
+/* ---------------------------
+   seção de cursos (band)
+   --------------------------- */
+.home-band {
+    padding: 2.4rem 0;
+    margin-top: 2rem;
+    background: linear-gradient(180deg, rgba(227, 197, 157, 0.02), rgba(0, 0, 0, 0) 30%);
+}
+
+/* grid de cursos */
+.home-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.home-course-card {
+    background: linear-gradient(180deg, #fffdf9, #fffcf6);
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(124, 82, 44, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.home-tag {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--home-accent-2);
+    border-radius: 999px;
+    padding: .3rem .55rem;
+    background: rgba(200, 150, 80, 0.06);
+    border: 1px solid rgba(200, 150, 80, 0.08);
+    font-size: .86rem;
+}
+
+/* rodapé do cartão de curso */
+.home-course-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .6rem;
+}
+
+/* ---------------------------
+   depoimentos / faixa
+   --------------------------- */
+.home-depo-section {
+    background: linear-gradient(180deg, rgba(118, 167, 106, 0.02), rgba(0, 0, 0, 0) 30%);
+    padding: 2rem 0;
+    margin-top: 1rem;
+}
+
+.home-depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.home-depo {
+    background: #fff9f0;
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    color: var(--cor-texto-secundario);
+}
+
+/* ---------------------------
+   equipe — versão premium
+   --------------------------- */
+
+/* equipe: grade 2x2 e estilo dos cards (versão final) */
+.team-grid {
+    display: grid;
+    gap: 1.6rem;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 2 colunas (2x2) */
+}
+
+/* remover qualquer regra que force grid-column no 4º item
+   (apague ou comente esta regra se existir no seu arquivo):
+.team-grid > .team-card:nth-child(4) {
+  grid-column: 2;
+}
+*/
+
+.team-card {
+    background: linear-gradient(180deg, #ffffff, #fff8ee);
+    padding: 2rem 1.6rem;
+    border-radius: 18px;
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    border: 1px solid rgba(180, 120, 60, 0.10);
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* borda gradiente (efeito premium) */
+.team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--home-accent-1, #b66734), var(--home-accent-2, #c89127));
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+    opacity: 0.95;
+    transition: opacity .18s ease;
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+/* avatar - imagem real */
+.avatar-img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto .6rem;
+    border: 4px solid rgba(182, 118, 52, 0.18);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
+    background: #eee;
+}
+
+/* nome e cargo */
+.team-card strong {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1.02rem;
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+.team-role {
+    margin-top: .45rem;
+    color: var(--cor-texto-secundario);
+    font-size: .95rem;
+}
+
+/* responsividade: 1 coluna em telas pequenas */
+@media (max-width: 980px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* avatar */
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--home-accent-1), var(--home-accent-2));
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* nome */
+.team-card strong {
+    font-size: 1.12rem;
+    color: var(--cor-texto);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* cargo */
+.team-role {
+    color: var(--cor-texto-secundario);
+    font-size: .93rem;
+    margin-top: .35rem;
+}
+
+/* fundo decorativo leve atrás do card */
+.team-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 20%, rgba(182, 118, 52, 0.09), transparent 60%);
+    z-index: -1;
+    opacity: .55;
+}
+
+/* ---------------------------
+   cta final
+   --------------------------- */
+.home-cta {
+    text-align: center;
+    padding: 1.6rem 0;
+    margin-top: 1.2rem;
+}
+
+.home-cta .btn-destaque {
+    margin-top: 1rem;
+}
+
+/* ---------------------------
+   animações 'reveal' (home)
+   --------------------------- */
+/* elementos começam ocultos e entram com suavidade */
+.home-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: all 520ms cubic-bezier(.2, .9, .2, 1);
+    will-change: transform, opacity;
+}
+
+.home-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------------------
+   responsividade
+   --------------------------- */
+@media (max-width: 980px) {
+    .home-hero-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .home-courses-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-stats {
+        justify-content: flex-start;
+        gap: .8rem;
+    }
+}
