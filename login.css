@@ -1,0 +1,125 @@
+body {
+    background: var(--cor-fundo, #F6EAD6);
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: var(--cor-fundo, #F6EAD6);
+}
+
+.login-card {
+    background: rgba(240, 226, 215, 0.45); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(12px);     /* Efeito vidro fosco */
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1.2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.15); /* borda suave */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);     /* sombra igual à da foto */
+}
+
+
+.login-card h2 {
+font-size: 2.2rem;
+margin-bottom: 2rem;
+text-align: center;
+color: var(--cor-fundo-escuro, #26211D);
+font-weight: 700;
+}
+
+
+.form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 1.3rem;
+}
+
+
+label {
+color: var(--cor-texto, #26211D);
+font-weight: 600;
+margin-bottom: .4rem;
+}
+
+
+input {
+padding: 0.9rem 1rem;
+border-radius: 0.6rem;
+border: 1px solid #d8c8b5;
+background: #fffdfa;
+font-size: 1rem;
+color: var(--cor-texto, #26211D);
+transition: all .3s ease;
+}
+
+
+input:focus {
+outline: none;
+border-color: var(--cor-primaria, #B66734);
+box-shadow: 0 0 0 3px rgba(182, 103, 52, 0.25);
+}
+
+
+.btn-enviar,
+.btn-redefinir {
+margin-top: 0.5rem;
+width: 100%;
+padding: 1rem;
+background: var(--cor-primaria, #B66734);
+border: none;
+border-radius: .6rem;
+color: var(--branco, #FFFFFF);
+font-size: 1.1rem;
+cursor: pointer;
+font-weight: 600;
+display: inline-flex;
+justify-content: center;
+transition: background .3s ease, transform .2s ease;
+}
+
+.btn-enviar:hover,
+.btn-redefinir:hover {
+background: var(--cor-secundaria, #C89127);
+transform: scale(1.02);
+}
+
+
+/* Botão de redefinir */
+.btn-resetar {
+    display: block;
+    margin: 0.8rem auto 0 auto; /* centraliza */
+    text-align: center;
+
+    color: var(--cor-primaria, #B66734);
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-decoration: none; /* remove sublinhado */
+    transition: 0.3s ease;
+}
+
+.btn-resetar:hover {
+    text-decoration: underline; /* sublinha apenas no hover */
+    color: var(--cor-secundaria, #C89127);
+}
+
+
+@media (max-width: 480px) {
+.login-card {
+padding: 1.8rem;
+}
+
+
+.login-card h2 {
+font-size: 1.8rem;
+}
+}
