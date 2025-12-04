@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#26211D" />
+    <title>Schoolboy Center SBC — Home</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- seu styles global -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- estilos específicos da home -->
+    <link rel="stylesheet" href="home.css" />
+</head>
+
+<body class="home-page">
+    <!-- header (reaproveita markup do seu projeto) -->
+    <header class="topo">
+        <div class="topo-conteudo container">
+            <div class="logo">
+                <span class="logo-simbolo">SBC</span>
+                <div class="logo-textos">
+                    <span class="logo-nome">Schoolboy Center</span>
+                    <span class="logo-subtitulo">Knowledge and Wisdom</span>
+                </div>
+            </div>
+
+            <nav class="menu" aria-label="main navigation">
+                <a href="home.html" class="menu-link">Home</a>
+                <a href="home.html#sobre-home" class="menu-link">Sobre</a>
+                <a href="home.html#cursos-home" class="menu-link">Cursos</a>
+                <a href="index.html#mensalidades" class="menu-link">Mensalidades</a>
+                <a href="index.html#matricula" class="menu-link">Matrícula</a>
+                <a href="home.html#contato-home" class="menu-link">Contato</a>
+            </nav>
+
+            <div class="lang-switcher">
+                <button class="lang-btn ativo" data-lang="pt"><img src="https://flagcdn.com/w20/br.png"
+                        alt="Português"></button>
+                <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w20/us.png"
+                        alt="English"></button>
+                <button class="lang-btn" data-lang="es"><img src="https://flagcdn.com/w20/es.png"
+                        alt="Español"></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home-hero" class="home-hero">
+            <div class="container home-hero-wrap">
+                <div class="hero-textos home-reveal">
+                    <h1 class="home-title">Schoolboy Center — Inglês para a vida real</h1>
+                    <p class="home-intro">
+                        Conectamos método, prática e comunidade para transformar seu inglês em ferramenta de liberdade
+                        profissional e pessoal.
+                    </p>
+
+                    <div class="home-actions">
+                        <a class="btn-destaque" href="index.html#matricula">Matricule-se</a>
+                        <a class="btn-glow" href="#cursos-home">Ver cursos</a>
+                        <a class="home-link-plain" href="#contato-home">Fale conosco</a>
+                    </div>
+
+                    <div class="home-stats" style="margin-top:1.6rem;">
+                        <div class="home-stat home-reveal">
+                            <div class="home-num">+120</div>
+                            <div class="home-lab">alunos ativos</div>
+                        </div>
+                        <div class="home-stat home-reveal">
+                            <div class="home-num">96%</div>
+                            <div class="home-lab">satisfação</div>
+                        </div>
+                        <div class="home-stat home-reveal">
+                            <div class="home-num">+4</div>
+                            <div class="home-lab">anos de operação</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="home-side-card home-reveal" aria-hidden="true">
+                    <h3>Visão e missão</h3>
+                    <p>Preparar alunos para usar o inglês com confiança em situações reais — viagens, trabalho e
+                        estudos.
+                        Apoiamos resultados mensuráveis e crescimento contínuo.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- cursos -->
+        <section id="cursos-home" class="secao home-band">
+            <div class="container">
+                <header class="home-reveal">
+                    <h2>Cursos em destaque</h2>
+                    <p>Formatos pensados para diferentes objetivos — escolha o que combina com você.</p>
+                </header>
+
+                <div class="home-courses-grid home-reveal" style="margin-top:1rem;">
+                    <div class="home-course-card">
+                        <div class="home-tag">Aulas em grupo</div>
+                        <h4>Grupo semanal</h4>
+                        <p>Aulas semanais com foco em conversação e prática contextual.</p>
+                        <div class="home-course-foot">
+                            <strong style="color:var(--cor-texto)">R$ 180/mês</strong>
+                            <a class="social-link" href="index.html#matricula">Matricule-se</a>
+                        </div>
+                    </div>
+
+                    <div class="home-course-card">
+                        <div class="home-tag">Individual</div>
+                        <h4>Aulas particulares</h4>
+                        <p>Plano individualizado com conteúdo sob medida e flexibilidade de horário.</p>
+                        <div class="home-course-foot">
+                            <strong style="color:var(--cor-texto)">Sob consulta</strong>
+                            <a class="social-link" href="index.html#matricula">Matricule-se</a>
+                        </div>
+                    </div>
+
+                    <div class="home-course-card">
+                        <div class="home-tag">Intensivo</div>
+                        <h4>Intensivo de certificação</h4>
+                        <p>Treinamento intensivo para provas e exames com simulações e feedback personalizado.</p>
+                        <div class="home-course-foot">
+                            <strong style="color:var(--cor-texto)">R$ 450 (intensivo)</strong>
+                            <a class="social-link" href="index.html#matricula">Matricule-se</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- diferenciais -->
+        <section id="diferenciais-home" class="secao">
+            <div class="container">
+                <header class="home-reveal">
+                    <h2>Diferenciais</h2>
+                    <p>O que nos torna únicos no ensino do inglês.</p>
+                </header>
+
+                <div class="grid-sobre" style="margin-top:1rem;">
+                    <div class="sobre-item home-reveal">
+                        <h3>Metodologia ativa</h3>
+                        <p>Atividades práticas, role-plays e projetos aplicados ao cotidiano.</p>
+                    </div>
+                    <div class="sobre-item home-reveal">
+                        <h3>Professores qualificados</h3>
+                        <p>Formação internacional com foco em fluência comunicativa.</p>
+                    </div>
+                    <div class="sobre-item home-reveal">
+                        <h3>Acompanhamento</h3>
+                        <p>Planos de evolução com feedbacks regulares e metas claras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- depoimentos -->
+        <section class="home-depo-section">
+            <div class="container">
+                <header class="home-reveal">
+                    <h2>Depoimentos</h2>
+                    <p>O que alunos falam sobre a experiência.</p>
+                </header>
+
+                <div class="home-depoimentos-grid" style="margin-top:1em;">
+                    <div class="home-depo home-reveal">“As aulas me deram confiança para falar em reuniões e
+                        entrevistas.”<br /><strong>— Felipe</strong></div>
+                    <div class="home-depo home-reveal">“Aprendi rápido a me comunicar em viagens. Professores
+                        ótimos.”<br /><strong>— Mariana</strong></div>
+                    <div class="home-depo home-reveal">“O intensivo me preparou para a certificação.”<br /><strong>—
+                            Ana</strong>
+                    </div>
+                    <div class="home-depo home-reveal">“A comunidade me ajudou a praticar fora da sala.”<br /><strong>—
+                            Lucas</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- equipe (já com classes atualizadas) -->
+        <!-- equipe (substituir bloco antigo por este) -->
+        <section id="equipe-home" class="secao band">
+            <div class="container">
+                <header class="reveal">
+                    <h2>Equipe</h2>
+                    <p>Profissionais por trás das aulas.</p>
+                </header>
+
+                <div class="team-grid" style="margin-top:1rem;">
+                    <!-- edison -->
+                    <article class="team-card home-reveal">
+                        <img class="avatar-img" src="imagens/team/edison-gabriel.jpg" alt="Edison Gabriel">
+                        <strong>Edison Gabriel</strong>
+                        <div class="team-role">Coordenador Pedagógico</div>
+                    </article>
+
+                    <!-- janaina -->
+                    <article class="team-card home-reveal">
+                        <img class="avatar-img" src="janaina.jpg" alt="Janaina Ferreira Brandão">
+                        <strong>Janaina Ferreira Brandão</strong>
+                        <div class="team-role">Professor - Conversação</div>
+                    </article>
+
+                    <!-- iqui -->
+                    <article class="team-card home-reveal">
+                        <img class="avatar-img" src="iquidju.jpg" alt="Iqui Dju">
+                        <strong>Iqui Dju</strong>
+                        <div class="team-role">Fundador</div>
+                    </article>
+
+                    <!-- felipe -->
+                    <article class="team-card home-reveal">
+                        <img class="avatar-img" src="imagens/team/felipe-sousa.jpg" alt="Felipe de Sousa Araújo">
+                        <strong>Felipe de Sousa Araújo</strong>
+                        <div class="team-role">Head de Metodologia</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- cta final -->
+        <section class="secao">
+            <div class="container home-cta home-reveal">
+                <h2>Pronto para transformar seu inglês?</h2>
+                <p>Faça o teste de nível e garanta sua vaga. Acesse a página de matrícula.</p>
+                <div style="margin-top:1rem;">
+                    <a class="btn-destaque" href="index.html#matricula">Ir para Matrícula</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- contato -->
+        <section id="contato-home" class="secao secao-contato">
+            <div class="container home-reveal">
+                <header>
+                    <h2>Contato</h2>
+                    <p>Fale conosco para tirar dúvidas ou agendar uma aula experimental.</p>
+                </header>
+
+                <div class="grid-contato" style="margin-top:1rem;">
+                    <div class="contato-info">
+                        <h3>Informações</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> (71) 99286-4210</li>
+                            <li><i class="fa-solid fa-envelope"></i> <strong>E-mail:</strong>
+                                schoolboycenter2016@gmail.com</li>
+                            <li><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> (71) 99286-4210</li>
+                        </ul>
+                    </div>
+
+                    <div class="contato-extra">
+                        <h3>Horários</h3>
+                        <p>Segunda a sexta: 8h às 21h<br />Sábado: 8h às 12h</p>
+                        <p>Responderemos o mais breve possível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"
+            style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+            <p>&copy; 2025 Schoolboy Center SBC</p>
+            <nav style="display:flex;gap:1rem">
+                <a href="home.html" class="menu-link">Home</a>
+                <a href="index.html#matricula" class="menu-link">Matrícula</a>
+                <a href="#contato-home" class="menu-link">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- utilitários (chatbot + toggle) reaproveitam seu script.js -->
+    <button class="btn-toggle" id="toggle-mode">Toggle Light Mode</button>
+
+    <div class="chatbot-container">
+        <button id="chatbot-toggle" class="chatbot-toggle">💬</button>
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header"><span>Suporte SBC</span><button id="chatbot-close"
+                    class="chatbot-close">&times;</button></div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="chatbot-message bot">Olá! Me chamo <b>LingoBot</b> 🤖</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input id="chatbot-input" type="text" placeholder="Digite sua pergunta..." />
+                <button id="chatbot-send" class="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- seu script.js (mantém funcionalidades) -->
+    <script src="script.js"></script>
+
+    <!-- script de 'reveal'(usa a home-reveal) -->
+    <script>
+        (function () {
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) e.target.classList.add('in-view');
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.home-reveal').forEach(el => obs.observe(el));
+        })();
+    </script>
+</body>
+
+</html>
