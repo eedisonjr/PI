@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#1a1e26" />
+    <title>SBC Administrador - Knowledge and Wisdom</title>
+    <link href="fonts.googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Estilos da nova paleta de cores (baseada na tela de cadastro) */
+        :root {
+            --cor-principal: #1a1e26;
+            --cor-secundaria: #334155;
+            --cor-destaque: #ffc107;
+            --cor-texto-claro: #f0f2f5;
+            --cor-texto-escuro: #333;
+            --cor-fundo-principal: #f0f2f5;
+            --cor-fundo-cartao: #fff;
+            --cor-borda-cartao: #ddd;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-escuro);
+        }
+
+        /* Estrutura da página */
+        .dashboard-body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .dashboard-main {
+            display: flex;
+            flex: 1;
+            padding-top: 80px;
+        }
+
+        .container {
+            width: min(90%, 1200px);
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        .topo {
+            background-color:  grey;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .topo-conteudo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-simbolo {
+            background-color: var(--cor-destaque);
+            color: var(--cor-principal);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .logo-textos {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+        }
+
+        .logo-nome {
+            color: var(--cor-texto-claro);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .logo-subtitulo {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        .menu-dashboard {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .menu-link-dashboard {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .menu-link-dashboard:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 250px;
+            background-color: grey;
+            color: var(--cor-texto-claro);
+            padding: 2rem 1rem;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: calc(100vh - 80px);
+            top: 80px;
+            left: 0;
+            overflow-y: auto;
+            font-weight: bolder;
+        }
+
+        .menu-lateral {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .menu-item {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-item:hover {
+            background-color: var(--cor-secundaria);
+        }
+
+        /* Conteúdo principal */
+        .conteudo-principal {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 250px;
+        }
+
+        .secao-dashboard {
+            background-color: var(--cor-fundo-cartao);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .titulo-pagina {
+            color: var(--cor-principal);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 2rem;
+        }
+
+        .card-dashboard {
+            border: 1px solid var(--cor-borda-cartao);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            background-color: #fafafa;
+        }
+
+        .niveis-select {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-nivel {
+            padding: 0.5rem 1rem;
+            background-color: var(--cor-fundo-principal);
+            border: 1px solid var(--cor-borda-cartao);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-nivel:hover,
+        .btn-nivel.ativo {
+            background-color: var(--cor-destaque);
+            color: var(--cor-principal);
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .formulario textarea,
+        .formulario input,
+        .formulario select,
+        .formulario input[type="file"] {
+            padding: 0.75rem;
+            border: 1px solid var(--cor-borda-cartao);
+            border-radius: 4px;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn-destaque {
+            background-color: var(--cor-destaque);
+            color: var(--cor-principal);
+            border: none;
+        }
+
+        .btn-destaque:hover {
+            background-color: #e6b300;
+        }
+    </style>
+</head>
+<body class="dashboard-body">
+    <header class="topo">
+        <div class="topo-conteudo container">
+            <div class="logo">
+                <span class="logo-simbolo">SBC</span>
+                <div class="logo-textos">
+                    <span class="logo-nome">Schoolboy Center</span>
+                    <span class="logo-subtitulo">Knowledge and Wisdom</span>
+                </div>
+            </div>
+            <nav class="menu-dashboard">
+                <a href="#perfil" class="menu-link-dashboard">Olá, Administrador(a)</a>
+                <a href="#logout" class="menu-link-dashboard">Sair</a>
+            </nav>
+        </div>
+    </header>
+    <main class="dashboard-main">
+        <aside class="sidebar">
+            <nav class="menu-lateral">
+                <a href="#painel-controle" class="menu-item"><i class="fas fa-chart-line"></i>Painel de Controle</a>
+                <a href="#usuarios" class="menu-item"><i class="fas fa-users-cog"></i>Gerenciar Usuários</a>
+                <a href="#cursos" class="menu-item"><i class="fas fa-graduation-cap"></i>Gerenciar Cursos</a>
+                <a href="#materiais" class="menu-item"><i class="fas fa-book-open"></i>Gerenciar Materiais</a>
+                <a href="#atividades" class="menu-item"><i class="fas fa-tasks"></i>Gerenciar Atividades</a>
+                <a href="#relatorios" class="menu-item"><i class="fas fa-file-alt"></i>Relatórios</a>
+            </nav>
+        </aside>
+        <section id="conteudo-principal" class="conteudo-principal">
+            <h1 class="titulo-pagina">Painel do Administrador</h1>
+            <div id="painel-controle" class="secao-dashboard">
+                <div class="card-dashboard">Visão geral da plataforma, com estatísticas e informações importantes.</div>
+            </div>
+            <div id="usuarios" class="secao-dashboard">
+                <h2>Gerenciar Usuários</h2>
+                <div class="card-dashboard">
+                    <h3>Professores e Alunos</h3>
+                    <p>Controle de cadastro, edição e remoção de usuários.</p>
+                </div>
+            </div>
+            <div id="cursos" class="secao-dashboard">
+                <h2>Gerenciar Cursos</h2>
+                <div class="card-dashboard">
+                    <h3>Níveis e Disciplinas</h3>
+                    <p>Gerenciamento de todos os cursos oferecidos.</p>
+                </div>
+            </div>
+            <div id="materiais" class="secao-dashboard">
+                <h2>Gerenciar Materiais</h2>
+                <div class="card-dashboard">
+                    <h3>Upload e Organização</h3>
+                    <p>Distribuição de materiais de estudo para os cursos.</p>
+                </div>
+            </div>
+            <div id="atividades" class="secao-dashboard">
+                <h2>Gerenciar Atividades</h2>
+                <div class="card-dashboard">
+                    <h3>Cadastro e Prazos</h3>
+                    <p>Criação e acompanhamento das atividades da plataforma.</p>
+                </div>
+            </div>
+            <div id="relatorios" class="secao-dashboard">
+                <h2>Relatórios</h2>
+                <div class="card-dashboard">
+                    <h3>Desempenho e Acesso</h3>
+                    <p>Relatórios detalhados sobre o desempenho dos alunos e uso da plataforma.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
