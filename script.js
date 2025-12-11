@@ -737,3 +737,56 @@ setLanguage(savedLang || "pt");
 
     elements.forEach(el => obs.observe(el));
 })();
+
+// marca o link ativo no header com base em pathname / hash
+function markHeaderActive() {
+    // limpa estados anteriores
+    document.querySelectorAll('.menu-link, .auth-btn, .auth-cta').forEach(el => el.classList.remove('ativo'));
+
+    const path = location.pathname.split('/').pop(); // ex: 'index.html' ou 'login.html' ou ''
+    const hash = location.hash; // ex: '#inicio'
+
+    // prioridade: páginas específicas (login / register)
+    if (path === 'login.html') {
+        const b = document.getElementById('btn-login');
+        if (b) b.classList.add('ativo');
+        return;
+    }
+    if (path === 'register.html' || path === 'cadastro.html') {
+        const b = document.getElementById('btn-register');
+        if (b) b.classList.add('ativo');
+        return;
+    }
+
+    // se for a mesma landing (index.html / ''), tenta usar hash/início
+    if (!path || path === 'index.html' || path === 'home.html') {
+        // se houver hash, marca a seção correspondente
+        if (hash) {
+            const link = document.querySelector(`.menu-link[href="${hash}"]`);
+            if (link) { link.classList.add('ativo'); return; }
+        }
+        // padrão para início
+        const homeLink = document.querySelector('.menu-link[href="#inicio"]');
+        if (homeLink) homeLink.classList.add('ativo');
+    } else {
+        // se existir algum .menu-link com href igual ao arquivo (caso use links absolutos)
+        const possible = document.querySelector(`.menu-link[href="${path}"]`);
+        if (possible) possible.classList.add('ativo');
+    }
+}
+
+// ligações (evento)
+window.addEventListener('DOMContentLoaded', () => {
+    markHeaderActive();
+    // quando mudar hash (navegação interna), atualizar active
+    window.addEventListener('hashchange', markHeaderActive);
+});
+
+// também atualiza quando o usuário rola (mantém seu highlight por scroll)
+window.addEventListener("scroll", () => {
+    // chama a sua função existente de destaque por scroll se existir
+    if (typeof onScrollHighlight === 'function') onScrollHighlight();
+    // manter marcação coerente
+    markHeaderActive();
+});
+

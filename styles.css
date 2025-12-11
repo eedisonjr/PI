@@ -251,28 +251,50 @@ body {
 
 /* botões */
 .btn {
-    border: none;
-    border-radius: 999px;
-    padding: .85rem 1.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    padding: .55rem 1.05rem;
+    border-radius: 999px;
+    font-weight: 700;
     font-size: .95rem;
+    text-decoration: none;
+    transition: all .16s ease;
+    cursor: pointer;
 }
 
+/* visual preenchido (cadastro) — tenta ser idêntico ao seu .btn-destaque */
 .btn-destaque {
-    background-color: var(--cor-primaria);
+    background-color: var(--home-accent-1, #b66734);
     color: #fff;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .25)
+    box-shadow: 0 12px 28px rgba(99, 52, 19, 0.18);
+    border: 0;
+    padding: .6rem 1.15rem;
 }
 
 .btn-destaque:hover {
-    background-color: #9D582C
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(99, 52, 19, 0.22);
 }
+
+/* outline variant para o Login — pareado com o tamanho do cadastro */
+.btn-outline {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.96));
+    color: var(--home-accent-1, #b66734);
+    border: 2px solid rgba(182, 118, 52, 0.12);
+    padding: .5rem 1.05rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.btn-outline:hover {
+    color: #fff;
+    background: var(--home-accent-1, #b66734);
+    border-color: var(--home-accent-1, #b66734);
+    box-shadow: 0 16px 36px rgba(99, 52, 19, 0.18);
+    transform: translateY(-3px);
+}
+
 
 /* seções gerais */
 .secao {
@@ -844,7 +866,322 @@ body {
     transition: 0.3s ease;
 }
 
-.btn-secundario:hover {
+.auth-actions .btn-outline {
+    background: transparent !important;
+    border: 2px solid rgba(182, 118, 52, 0.35) !important;
+    color: #B66734 !important;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.auth-actions .btn-outline:hover {
+    background: #B66734 !important;
+    color: #fff !important;
+    border-color: #B66734 !important;
+}
+
+/* ---------- header: auth buttons ----------- */
+/* container das ações de login / cadastro no topo */
+.auth-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* botão pequeno de login (visual neutro) */
+.auth-btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--cor-texto);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+/* hover para login */
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------- CORREÇÃO: tornar o botão "Cadastrar-se" sólido --------------- */
+/* usamos especificidade header .auth-cta para evitar sobrescritas indesejadas */
+.topo .auth-cta {
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.94rem;
     background: var(--cor-primaria);
-    color: white;
+    /* fundo sólido */
+    color: #fff;
+    border: none;
+    /* remove borda fina */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 28px rgba(99, 52, 19, 0.18);
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.topo .auth-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(99, 52, 19, 0.22);
+    background: var(--cor-secundaria);
+    /* leve mudança ao hover */
+}
+
+/* manter possibilidade de ativar o estado 'ativo' para destaque sem quebrar contraste */
+.auth-cta.ativo {
+    outline: 2px solid rgba(255, 255, 255, 0.06);
+    outline-offset: 2px;
+}
+
+/* marcação 'ativo' para links do header (mesma que usa sua nav) */
+.menu-link.ativo,
+.auth-btn.ativo,
+.auth-cta.ativo {
+    color: var(--cor-texto);
+}
+
+.auth-btn.ativo {
+    outline: 2px solid rgba(0, 0, 0, 0.08);
+    outline-offset: 2px;
+}
+
+/* responsividade: esconder textos do botão em telas bem pequenas (opcional) */
+@media (max-width: 640px) {
+    .auth-actions {
+        gap: 0.4rem;
+    }
+
+    .auth-cta {
+        padding-inline: 0.8rem;
+        font-size: 0.88rem;
+    }
+
+    .auth-btn {
+        padding-inline: 0.6rem;
+        font-size: 0.86rem;
+    }
+}
+
+/* ---------- header: auth buttons (ajuste final) ----------- */
+/* container das ações de login / cadastro no topo */
+.auth-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* botão pequeno de login (visual neutro/outline) */
+.auth-btn {
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.96));
+    color: var(--home-accent-1, var(--cor-primaria));
+    border: 2px solid rgba(182, 118, 52, 0.14);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+}
+
+/* hover para login (outline -> invert slightly) */
+.auth-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(182, 118, 52, 0.06);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* botão cadastrar usa seu estilo de destaque (preenchido) */
+.auth-cta {
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, var(--home-accent-1, var(--cor-primaria)), color-mix(in srgb, var(--home-accent-1, var(--cor-primaria)) 80%, #ffffff 20%));
+    color: #fff;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(99, 52, 19, 0.18);
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.auth-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(99, 52, 19, 0.24);
+    filter: saturate(1.06);
+}
+
+/* estado ativo (mesma regra que usa para menu) */
+.menu-link.ativo,
+.auth-btn.ativo,
+.auth-cta.ativo {
+    color: var(--cor-texto);
+}
+
+/* pequeno ajuste: se houver outline no auth-btn ativo, mostra borda clara */
+.auth-btn.ativo {
+    outline: 2px solid rgba(0, 0, 0, 0.06);
+    outline-offset: 2px;
+}
+
+/* responsividade: reduzir tamanho dos botões em telas pequenas */
+@media (max-width: 640px) {
+    .auth-actions {
+        gap: 0.4rem;
+    }
+
+    .auth-cta,
+    .auth-btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.88rem;
+    }
+}
+
+/* ---------- header: auth buttons (ajuste final) ----------- */
+.auth-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* botão pequeno de login (outline) */
+.auth-btn {
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.98));
+    color: var(--home-accent-1, var(--cor-primaria));
+    border: 2px solid rgba(182, 118, 52, 0.14);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+}
+
+/* hover para login (outline -> leve preenchimento) */
+.auth-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(182, 118, 52, 0.06);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* botão cadastrar preenchido (cta) */
+.auth-cta {
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, var(--home-accent-1, var(--cor-primaria)), color-mix(in srgb, var(--home-accent-1, var(--cor-primaria)) 80%, #ffffff 20%));
+    color: #fff;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(99, 52, 19, 0.18);
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.auth-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(99, 52, 19, 0.24);
+    filter: saturate(1.06);
+}
+
+/* estado ativo (mesma regra que usa para menu) */
+.menu-link.ativo,
+.auth-btn.ativo,
+.auth-cta.ativo {
+    color: var(--cor-texto);
+}
+
+/* destaque visual no botão login quando ativo */
+.auth-btn.ativo {
+    outline: 2px solid rgba(0, 0, 0, 0.06);
+    outline-offset: 2px;
+}
+
+/* responsividade: reduzir tamanho dos botões em telas pequenas */
+@media (max-width: 640px) {
+    .auth-actions {
+        gap: 0.4rem;
+    }
+
+    .auth-cta,
+    .auth-btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.88rem;
+    }
+}
+
+/* container das ações de autenticação */
+.auth-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* botão de LOGIN (outline elegante) */
+.auth-btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--cor-texto);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+}
+
+.auth-btn:hover {
+    background: var(--cor-primaria);
+    color: #fff;
+    border-color: var(--cor-primaria);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* botão CADASTRAR-SE (destaque premium) */
+.auth-cta {
+    padding: 0.5rem 1.05rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.auth-cta:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
 }

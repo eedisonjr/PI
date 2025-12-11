@@ -20,9 +20,10 @@
 </head>
 
 <body class="home-page">
-    <!-- topo -->
     <header class="topo">
         <div class="topo-conteudo container">
+
+            <!-- logo -->
             <div class="logo">
                 <span class="logo-simbolo">SBC</span>
                 <div class="logo-textos">
@@ -31,28 +32,36 @@
                 </div>
             </div>
 
-            <nav class="menu" aria-label="main navigation">
-                <a href="home.html" class="menu-link" data-i18n="nav-home">Home</a>
-                <a href="home.html#sobre-home" class="menu-link" data-i18n="nav-about">Sobre</a>
-                <a href="home.html#cursos-home" class="menu-link" data-i18n="nav-courses">Cursos</a>
-                <a href="index.html#mensalidades" class="menu-link" data-i18n="nav-pricing">Mensalidades</a>
-                <a href="index.html#matricula" class="menu-link" data-i18n="nav-enroll">Matrícula</a>
-                <a href="home.html#contato-home" class="menu-link" data-i18n="nav-contact">Contato</a>
+            <!-- menu -->
+            <nav class="menu">
+                <!-- para a LP: mantenha apenas o link para home.html aqui -->
+                <a href="home.html" class="menu-link">Home</a>
+                <a href="#sobre" class="menu-link" data-i18n="nav-about">Sobre</a>
+                <a href="#redes" class="menu-link" data-i18n="nav-social">Redes Sociais</a>
+                <a href="#mensalidades" class="menu-link" data-i18n="nav-pricing">Mensalidades</a>
+                <a href="#matricula" class="menu-link" data-i18n="nav-enroll">Matrícula</a>
+                <a href="#contato" class="menu-link" data-i18n="nav-contact">Contato</a>
             </nav>
 
+            <!-- ações de autenticação (mesma ordem em todas as páginas) -->
+            <div class="auth-actions">
+                <a href="login.html" class="btn auth-btn">Login</a>
+                <a href="cadastro.html" class="btn btn-destaque auth-cta">Cadastrar-se</a>
+            </div>
+
+            <!-- troca de idioma -->
             <div class="lang-switcher">
-                <button class="lang-btn ativo" data-lang="pt">
-                    <img src="https://flagcdn.com/w20/br.png" alt="Português">
-                </button>
-                <button class="lang-btn" data-lang="en">
-                    <img src="https://flagcdn.com/w20/us.png" alt="English">
-                </button>
-                <button class="lang-btn" data-lang="es">
-                    <img src="https://flagcdn.com/w20/es.png" alt="Español">
-                </button>
+                <button class="lang-btn active" data-lang="pt"><img src="https://flagcdn.com/w20/br.png"
+                        alt="Português"></button>
+                <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w20/us.png"
+                        alt="English"></button>
+                <button class="lang-btn" data-lang="es"><img src="https://flagcdn.com/w20/es.png"
+                        alt="Español"></button>
             </div>
         </div>
     </header>
+
+
 
     <main>
         <!-- hero -->
@@ -242,7 +251,7 @@
 
                 <div class="team-grid">
                     <article class="team-card home-reveal">
-                        <img class="avatar-img" src="imagens/team/edison-gabriel.jpg" alt="Edison Gabriel">
+                        <img class="avatar-img" src="edisson.jpeg" alt="Edison Gabriel">
                         <strong>Edison Gabriel</strong>
                         <div class="team-role">Coordenador pedagógico</div>
                     </article>
@@ -260,7 +269,7 @@
                     </article>
 
                     <article class="team-card home-reveal">
-                        <img class="avatar-img" src="imagens/team/felipe-sousa.jpg" alt="Felipe de Sousa Araújo">
+                        <img class="avatar-img" src="felipe.jpeg" alt="Felipe de Sousa Araújo">
                         <strong>Felipe de Sousa Araújo</strong>
                         <div class="team-role">Head de metodologia</div>
                     </article>
@@ -331,9 +340,11 @@
             style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
             <p>&copy; 2025 Schoolboy Center SBC</p>
             <nav style="display:flex;gap:1rem">
-                <a href="home.html" class="menu-link" data-i18n="nav-home">Home</a>
+                <a href="home.html" class="menu-link" data-i18n="nav-home">Inicio</a>
                 <a href="index.html#matricula" class="menu-link" data-i18n="nav-enroll">Matrícula</a>
                 <a href="#contato-home" class="menu-link" data-i18n="nav-contact">Contato</a>
+                <a href="cadastro.html" class="menu-link">Cadastro</a>
+                <a href="login.html" class="menu-link">Login</a>
             </nav>
         </div>
     </footer>
