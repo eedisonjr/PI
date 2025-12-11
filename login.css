@@ -1,0 +1,283 @@
+:root {
+    --cor-fundo: #F6EAD6;
+    --cor-fundo-escuro: #26211D;
+    --cor-primaria: #B66734;
+    --cor-secundaria: #C89127; 
+    --cor-texto: #26211D;
+    --cor-borda-input: #d8c8b5;
+    --branco: #FFFFFF;
+    --cor-sucesso: #4CAF50;
+    --cor-erro: #F44336;
+}
+ 
+body {
+    background: var(--cor-fundo);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+ 
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+ 
+.login-card {
+    background: rgba(240, 226, 215, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+ 
+
+.login-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--cor-fundo-escuro);
+}
+ 
+.logo-sbc {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 0 auto 0.3rem auto;
+    object-fit: cover;
+}
+ 
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    position: relative; 
+}
+ 
+label {
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+ 
+input[type="email"],
+input[type="password"] {
+    padding: 0.9rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor-borda-input);
+    background: #fffdfa;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    width: 100%;
+    transition: all .3s ease;
+    box-sizing: border-box;
+}
+ 
+.senha-group {
+    position: relative;
+    width: 100%;
+}
+
+.senha-group input {
+    width: 100%;
+    min-width: 0;
+    padding-right: 3.2rem;
+    box-sizing: border-box;
+    padding: 0.75rem 3.2rem 0.75rem 1rem;
+    border-radius: 0.6rem;
+}
+
+.toggle-floating {
+    position: absolute;
+    top: 50%;
+    right: 0.9rem;
+    transform: translateY(-50%);
+    
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.toggle-floating:hover {
+    background: rgba(0, 0, 0, 0.25);
+    transform: translateY(-50%) scale(1.07);
+}
+
+#togglePassword svg {
+    color: #fff;
+}
+ 
+.toggle-btn {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.6rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    transition: color 0.2s ease;
+    transform: none;
+}
+.toggle-btn:hover {
+    color: #4b5563;
+}
+ 
+ 
+input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(182, 103, 52, 0.25);
+}
+ 
+.input-valid {
+    border-color: var(--cor-sucesso) !important;
+}
+.input-invalid {
+    border-color: var(--cor-erro) !important;
+}
+ 
+.options-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+ 
+.remember-me-group {
+    display: flex;
+    align-items: center;
+}
+ 
+.remember-me-group input[type="checkbox"] {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d1d5db;
+    accent-color: var(--cor-primaria);
+}
+ 
+.remember-me-group label {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+ 
+.btn-resetar {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+.btn-resetar:hover {
+    text-decoration: underline;
+}
+ 
+.btn-enviar {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background: var(--cor-primaria);
+    color: var(--branco);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-enviar:hover {
+    background: var(--cor-secundaria);
+    transform: scale(1.01);
+}
+ 
+.social-login-separator {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+ 
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+ 
+.social-buttons button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+ 
+.btn-google {
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    color: var(--cor-texto);
+}
+.btn-google:hover {
+    background-color: #f7f7f7;
+}
+ 
+.btn-facebook {
+    background-color: #1877f2;
+    color: white;
+}
+.btn-facebook:hover {
+    background-color: #1a56b9;
+}
+ 
+.btn-twitter {
+    background-color: #000000;
+    color: white;
+}
+.btn-twitter:hover {
+    background-color: #333333;
+}
+ 
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+    .login-card h2 {
+        font-size: 1.8rem;
+    }
+    .logo-sbc {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
